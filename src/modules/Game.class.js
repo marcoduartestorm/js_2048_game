@@ -1255,6 +1255,7 @@ class Game {
     ];
     this.score = 0;
     this.state = 'playing';
+    changeScore(this.score);
   }
 
   checkWin() {

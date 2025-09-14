@@ -12,7 +12,7 @@ botao.addEventListener('click', function () {
     hideMessages();
     game.start();
     game.insert2RandomNumbersStart();
-    preenche(game.returnState());
+    preenche(game.getState());
     botao.classList.remove('start');
     botao.classList.add('restart');
     botao.textContent = 'Restart';
@@ -21,7 +21,7 @@ botao.addEventListener('click', function () {
     game.restart();
     game.insert2RandomNumbersStart();
     hideMessages();
-    preenche(game.returnState());
+    preenche(game.getState());
   }
 });
 
@@ -69,6 +69,6 @@ document.addEventListener('keydown', (evt) => {
       showMessage('lose');
     }
 
-    preenche(game.returnState());
+    preenche(game.getState());
   }
 });
