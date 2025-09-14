@@ -69,7 +69,7 @@ export function randomPosition(table) {
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
       if (table[i][j] === 0) {
-        vet.push({ row: [i], column: [j] });
+        vet.push({ row: i, column: j });
       }
     }
   }

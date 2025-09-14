@@ -1275,18 +1275,14 @@ class Game {
   }
 
   insert2RandomNumbersStart() {
-    const obj1 = randomPosition(this.table);
-    let obj2;
+    let obj1;
 
     do {
-      obj2 = randomPosition(this.table);
-    } while (obj1.row === obj2.row && obj1.column === obj2.column);
+      obj1 = randomPosition(this.table);
+    } while (Number.parseInt(obj1.column) === 3);
 
-    const n1 = randomNumber();
-    const n2 = randomNumber();
-
-    this.table[obj1.row][obj1.column] = n1;
-    this.table[obj2.row][obj2.column] = n2;
+    this.table[obj1.row][obj1.column] = 2;
+    this.table[obj1.row][Number.parseInt(obj1.column) + 1] = 2;
   }
 
   insert1RandomNumber() {
