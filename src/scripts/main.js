@@ -55,7 +55,7 @@ document.addEventListener('keydown', (evt) => {
     }
 
     if (game.checkWin()) {
-      game.getStatus = 'win';
+      game.setStatus('win');
       showMessage('win');
     } else if (
       !(
@@ -65,7 +65,7 @@ document.addEventListener('keydown', (evt) => {
         game.moveLeftCheck()
       )
     ) {
-      game.getStatus = 'lose';
+      game.setStatus('lose');
       showMessage('lose');
     }
 

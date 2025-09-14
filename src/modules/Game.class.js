@@ -8,7 +8,7 @@ import {
 } from '../functions/functions.js';
 
 class Game {
-  state = 'idle';
+  status = 'idle';
   score = 0;
 
   constructor(initialState) {
@@ -1239,11 +1239,15 @@ class Game {
   }
 
   getStatus() {
-    return this.state;
+    return this.status;
+  }
+
+  setStatus(status2) {
+    this.status = status2;
   }
 
   start() {
-    this.state = 'playing';
+    this.status = 'playing';
   }
 
   restart() {
@@ -1254,7 +1258,7 @@ class Game {
       [0, 0, 0, 0],
     ];
     this.score = 0;
-    this.state = 'playing';
+    this.status = 'playing';
     changeScore(this.score);
   }
 
